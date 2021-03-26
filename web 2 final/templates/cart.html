@@ -1,0 +1,60 @@
+<!doctype html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Not Amazon (cart)</title>
+  <link rel="stylesheet" href="{{ url_for('static',    filename='css/template.css') }}">
+</head>
+
+<body>
+  <header>
+    <h1>Totally Not Amazon!</h1>
+  </header>
+
+  <nav>
+    <button onclick="document.location='..'">Store Home</button>
+    <button>To Cart</button>
+  </nav>
+  <div class="hidden" id="demo"> {{ tran }}</div>
+
+  <h2>If we don't have it, you don't need it!&trade;</h2>
+  <hr>
+
+
+      <h3 id="1">e</h3>
+
+      <h3 id="2">e</h3>
+
+      <h3 id="3">e</h3>
+
+      <h3 id="4">e</h3>
+
+      <h3 id="5">e</h3>
+
+      <h3 id="6">e</h3>
+
+      <h3 id="7">e</h3>
+
+      <button class="done" onclick="done()"><span>Procceed To Checkout</span></button>
+      <script>
+        function done()
+        {
+          alert("Your transaction is finished. You may now close this window");
+        }
+      </script>
+
+
+  </body>
+
+  <script>
+    var id = document.getElementById("demo").innerHTML;
+    document.getElementById("1").innerHTML = "Nintendo Switch quantity:" + id % 10;
+    document.getElementById("2").innerHTML = "Flash Drive quantity:" + Math.floor(id % 100 / 10);
+    document.getElementById("3").innerHTML = "Orange Mixer quantity:" + Math.floor(id % 1000 / 100);
+    document.getElementById("4").innerHTML = "Playstation Gift Card quantity:" + Math.floor(id % 10000 / 1000);
+    document.getElementById("5").innerHTML = "Red Apple quantity:" + Math.floor(id % 100000 / 10000);
+    document.getElementById("6").innerHTML = "Base Ball Glove quantity:" + Math.floor(id % 1000000 / 100000);
+    document.getElementById("7").innerHTML = "Scone quantity:" + Math.floor(id % 10000000 / 1000000);
+
+
+  </script>
